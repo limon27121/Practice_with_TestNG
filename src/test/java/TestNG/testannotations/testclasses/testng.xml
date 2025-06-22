@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Test1">
+        <classes>
+            <class name="TestNG.testannotations.testclasses.Testcase03">
+                <methods>
+                    <include name="log_in"/>
+                </methods>
+            </class>
+            <class name="TestNG.testannotations.testclasses.Testcase04">
+                <methods>
+                    <include name="log_out"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Test2">
+        <classes>
+            <class name="TestNG.testannotations.testclasses.Testcase03">
+                <methods>
+                    <include name="log_in"/>
+                </methods>
+            </class>
+            <class name="TestNG.testannotations.testclasses.Testcase04">
+                <methods>
+                    <include name="log_out"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>
