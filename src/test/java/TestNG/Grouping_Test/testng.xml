@@ -3,13 +3,14 @@
 <!--2.all regression-->
 <!--3.all sanity but not regression-->
 <!--4.all regression but not sanity-->
+<!--5.functional test excution-->
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="Test1">
         <groups>
             <run>
-                <include name="regression"/>
-                <exclude name="sanity"></exclude>
+                <include name="functional"/>
+<!--                <exclude name="sanity"></exclude>-->
             </run>
         </groups>
         <classes>
