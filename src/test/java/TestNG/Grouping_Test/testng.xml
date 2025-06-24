@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--1.all sanity-->
+<!--2.all regression-->
+<!--3.all sanity but not regression-->
+<!--4.all regression but not sanity-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Test1">
+        <groups>
+            <run>
+                <include name="sanity"/>
+<!--                <exclude name="sanity"></exclude>-->
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG.Grouping_Test.Log_in_test">
+            </class>
+            <class name="TestNG.Grouping_Test.Sign_in_test">
+            </class>
+            <class name="TestNG.Grouping_Test.Payment_test">
+            </class>
+        </classes>
+    </test>
+</suite>
