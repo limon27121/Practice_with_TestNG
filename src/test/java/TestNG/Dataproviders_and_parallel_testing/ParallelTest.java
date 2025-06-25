@@ -37,7 +37,6 @@ public class ParallelTest {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
         }
-        driver=new ChromeDriver();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         Thread.sleep(5000);
