@@ -44,7 +44,9 @@ public class DataProvider_Demo {
         driver.close();
     }
 
-    @DataProvider(name = "dp1")
+    //data provider method from TestNG
+    //indices means which row-data of array we pass
+    @DataProvider(name = "dp1",indices = {0,1,4})
     Object[][] login_data(){
        Object[][] userCredentials = {
                 {"user1@example.com", "password123"},
