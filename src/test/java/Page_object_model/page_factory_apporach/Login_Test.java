@@ -1,5 +1,6 @@
-package Page_object_model;
+package Page_object_model.page_factory_apporach;
 
+import Page_object_model.LogIn_page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -26,7 +27,7 @@ public class Login_Test {
     void Test_login() {
 
         //create object of login page
-       LogIn_page lg=new LogIn_page(driver);
+       LogInPage lg= new LogInPage(driver);
        lg.setUsername("Admin");
        lg.set_password("admin123");
        lg.log_in();
