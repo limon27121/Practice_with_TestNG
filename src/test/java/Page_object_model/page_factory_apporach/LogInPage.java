@@ -15,6 +15,7 @@ public class LogInPage {
     //constructor
     LogInPage(WebDriver driver){
         this.driver=driver;
+        //mandatory for page factory approach
         PageFactory.initElements(driver,this);
     }
 
@@ -29,6 +30,7 @@ public class LogInPage {
      //Multiple web element store in list
      @FindBy(tagName = "a")
     List<WebElement>links;
+
 
      //Actions
     public void setUsername(String name){

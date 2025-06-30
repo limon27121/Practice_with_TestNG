@@ -1,4 +1,4 @@
-package Page_object_model;
+package Page_object_model.without_page_factory_approach;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +12,8 @@ public class LogIn_page {
     }
 
     //Locators
+
+    //here By is the return type
   By txt_user_name_loc=(By.xpath("//input[@placeholder='Username']"));
   By txt_user_password_loc=(By.xpath("//input[@placeholder='Password']"));
 
@@ -22,6 +24,7 @@ public class LogIn_page {
     //Action Methods
 
     public void setUsername(String name){
+
         driver.findElement(txt_user_name_loc).sendKeys(name);
     }
 

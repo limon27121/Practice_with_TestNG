@@ -1,4 +1,4 @@
-package Page_object_model;
+package Page_object_model.without_page_factory_approach;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

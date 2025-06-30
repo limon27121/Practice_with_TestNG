@@ -1,6 +1,5 @@
 package Page_object_model.page_factory_apporach;
 
-import Page_object_model.LogIn_page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -42,3 +41,5 @@ public class Login_Test {
        driver.close();
     }
 }
+
+
