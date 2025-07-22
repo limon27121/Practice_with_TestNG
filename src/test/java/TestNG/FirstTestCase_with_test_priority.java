@@ -13,7 +13,7 @@ import java.time.Duration;
 //1.open app
 //2.log in app
 //3.log out app
-public class FirstTestCase {
+public class FirstTestCase_with_test_priority {
     WebDriver driver;
 
     @Test(priority = 1)
