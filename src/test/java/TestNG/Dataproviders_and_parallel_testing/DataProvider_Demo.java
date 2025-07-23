@@ -20,6 +20,8 @@ public class DataProvider_Demo {
         driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+
+    //data come from data provider method name dp1
     @Test(dataProvider = "dp1")
     void Test_Login(String email,String password) throws InterruptedException {
         driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
@@ -46,15 +48,17 @@ public class DataProvider_Demo {
 
     //data provider method from TestNG
     //indices means which row-data of array we pass
+    //name represent the method_name
+    //indices means which rows data are passed to from data provider method(row start from 0 index))
     @DataProvider(name = "dp1",indices = {0,1,4})
     Object[][] login_data(){
-       Object[][] userCredentials = {
+       Object[][] User_Credentials = {
                 {"user1@example.com", "password123"},
                 {"user2@example.com", "pass456"},
                 {"user3@example.com", "abc789"},
                 {"user4@example.com", "mypassword"},
                 {"moontaser009@gmail.com", "limon123"}
         };
-        return userCredentials;
+        return User_Credentials;
     }
 }
