@@ -16,6 +16,8 @@ import java.time.Duration;
 
 public class ParallelTest {
     WebDriver driver;
+
+    //cross_browser testing done by parameters annotation
     @BeforeClass
     @Parameters({"browser"})
     void Setup(String br) throws InterruptedException {

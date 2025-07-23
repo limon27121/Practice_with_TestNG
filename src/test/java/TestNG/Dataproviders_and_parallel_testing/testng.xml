@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--parallel parameter is used for parallel excution-->
 <suite name="All Test Suite" thread-count="5" parallel="tests">
+
+<!--    for chrome browser-->
     <test name="Chrome Test" verbose="2" preserve-order="true">
         <parameter name="browser" value="chrome"/>
         <classes>
@@ -15,6 +19,7 @@
         </classes>
     </test>
 
+<!--    for edge browser-->
     <test name="Edge Test" verbose="2" preserve-order="true">
         <parameter name="browser" value="edge"/>
         <classes>
