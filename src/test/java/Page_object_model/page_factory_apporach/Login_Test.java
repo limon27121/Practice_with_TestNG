@@ -35,7 +35,7 @@ public class Login_Test {
        lg.set_password("admin123");
        lg.log_in();
 
-       //Assertion
+       //------Assertion-------------
         Assert.assertEquals(driver.getTitle(),"OrangeHRM");
     }
 

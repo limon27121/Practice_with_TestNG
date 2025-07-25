@@ -12,7 +12,7 @@ public class hardassertion_vs_softassertion {
         System.out.println("line02");
         Assert.assertEquals(1,2);
         System.out.println("line03");
-        System.out.println("liine04");
+        System.out.println("line04");
     }
 
     @Test

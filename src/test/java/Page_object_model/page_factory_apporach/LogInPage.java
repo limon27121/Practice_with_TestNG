@@ -15,7 +15,8 @@ public class LogInPage {
     //constructor
     LogInPage(WebDriver driver){
         this.driver=driver;
-        //mandatory for page factory approach
+
+        //--------mandatory for page factory approach-----------
         PageFactory.initElements(driver,this);
     }
 
@@ -32,7 +33,7 @@ public class LogInPage {
     List<WebElement>links;
 
 
-     //Actions
+     //Actions methods
     public void setUsername(String name){
 
        loginContainer.sendKeys(name);
@@ -45,9 +46,6 @@ public class LogInPage {
     public void log_in(){
         login_button.click();
     }
-
-
-
 
 
 
