@@ -1,13 +1,19 @@
 package practice_with_testng.testclasses;
 
+<<<<<<< Updated upstream
 import org.openqa.selenium.WebElement;
+=======
+>>>>>>> Stashed changes
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import practice_with_testng.pageobject.home_page;
 import practice_with_testng.pageobject.login_page;
 
+<<<<<<< Updated upstream
 import java.util.List;
 
+=======
+>>>>>>> Stashed changes
 public class home_testcase002 extends base_class{
 
     @Test
@@ -19,6 +25,7 @@ public class home_testcase002 extends base_class{
         Assert.assertTrue(home.transcript_displayed());
         Assert.assertTrue(home.balance_displayed());
         Assert.assertTrue(home.payment_displayed());
+<<<<<<< Updated upstream
 //        Assert.assertTrue(home.navbar_displayed());
     }
 
@@ -68,4 +75,7 @@ public class home_testcase002 extends base_class{
 
 
 
+=======
+    }
+>>>>>>> Stashed changes
 }
