@@ -1,19 +1,15 @@
 package practice_with_testng.testclasses;
 
-<<<<<<< Updated upstream
+
 import org.openqa.selenium.WebElement;
-=======
->>>>>>> Stashed changes
+
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import practice_with_testng.pageobject.home_page;
 import practice_with_testng.pageobject.login_page;
 
-<<<<<<< Updated upstream
 import java.util.List;
-
-=======
->>>>>>> Stashed changes
 public class home_testcase002 extends base_class{
 
     @Test
@@ -25,7 +21,6 @@ public class home_testcase002 extends base_class{
         Assert.assertTrue(home.transcript_displayed());
         Assert.assertTrue(home.balance_displayed());
         Assert.assertTrue(home.payment_displayed());
-<<<<<<< Updated upstream
 //        Assert.assertTrue(home.navbar_displayed());
     }
 
@@ -54,7 +49,7 @@ public class home_testcase002 extends base_class{
         Assert.assertTrue(home.isNavItemClickable(home.getIqacLink()), "IQAC link is clickable");
 
         Assert.assertTrue(home.isNavItemDisplayed(home.getObeLink()), "OBE link not displayed");
-        Assert.assertTrue(home.isNavItemClickable(home.getObeLink()), "OBE link not clickable");
+        Assert.assertTrue(home.isNavItemClickable(home.obeLink), "OBE link not clickable");
     }
 
     @Test
@@ -72,10 +67,27 @@ public class home_testcase002 extends base_class{
     }
 
 
-
-
-
-=======
+    @Test
+    public void Test_Banner(){
+        home_page home=new home_page(driver);
+        Assert.assertTrue(home.isBannerDisplayed(home.banner));
     }
->>>>>>> Stashed changes
-}
+
+    @Test
+    public void Logout(){
+        home_page home=new home_page(driver);
+        Assert.assertTrue(home.isBannerDisplayed(home.logout_button));
+        Assert.assertTrue(home.isLogoutClickable(home.logout_button));
+        Assert.assertTrue(home.logout_action());
+    }
+
+
+
+
+
+
+
+
+
+    }
+

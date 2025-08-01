@@ -14,7 +14,21 @@ public class home_page extends basepage{
         super(driver);
     }
 
-    //locators
+
+
+    //------locators
+
+    //banner section
+
+    @FindBy(xpath="//div[@class='Header-Container']")
+     public WebElement banner;
+
+    @FindBy(xpath="//a[@id='ctl00_lblLogout']")
+    public WebElement logout_button;
+
+    @FindBy(xpath="//div[@class='card-body text-center']")
+    public WebElement login_card;
+
 
     @FindBy(xpath="//div[contains(@class,'bg-c-yellow update-card')]//div[contains(@class,'panel-body card-block')]")
     WebElement transcript_section;
@@ -39,11 +53,13 @@ public class home_page extends basepage{
     private WebElement iqacLink;
 
     @FindBy(linkText = "OBE")
-    private WebElement obeLink;
+    public WebElement obeLink;
 
     //-------navbar body-------------------
     @FindBy(css = "ul.level1.nav.navbar-nav.static li a")
     private List<WebElement> menuLinks;
+
+
 
 
 
@@ -76,14 +92,17 @@ public class home_page extends basepage{
         return nav_header_Items.size();
     }
 
+    //use methods to check if the web-element is displayed properly
     public boolean isNavItemDisplayed(WebElement element) {
         return element.isDisplayed();
     }
 
+    //use methods to check if the web-element is clickable or mot
     public boolean isNavItemClickable(WebElement element) {
         return element.isEnabled() && element.getAttribute("href") != null;
     }
 
+    //---return web-elements which is test on test-class--
     public WebElement getHomeLink() {
         return homeLink;
     }
@@ -100,7 +119,7 @@ public class home_page extends basepage{
 
     //----navbar body related methods---------
 
-    // Return total menu items
+    // Return total size of  menu-items
     public int getMenuItemCount() {
         return menuLinks.size();
     }
@@ -110,8 +129,27 @@ public class home_page extends basepage{
         return menuLinks;
     }
 
+    //this method is used for to check element is visible and clickable
     public boolean isLinkVisibleAndClickable(WebElement element) {
         String href = element.getAttribute("href");
         return element.isDisplayed() && href != null && !href.isEmpty();
     }
+
+    //--banner section------
+
+    public boolean isBannerDisplayed(WebElement element) {
+        return element.isDisplayed();
+    }
+
+    public boolean isLogoutClickable(WebElement element){
+        return element.isEnabled() && element.getAttribute("href") != null;
+    }
+
+    public boolean logout_action(){
+        logout_button.click();
+        return login_card.isDisplayed();
+    }
+
+
+
 }
