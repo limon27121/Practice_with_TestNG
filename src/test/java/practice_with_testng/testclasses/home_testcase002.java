@@ -82,6 +82,22 @@ public class home_testcase002 extends base_class{
     }
 
 
+    @Test
+    public void home_Body_Test(){
+        home_page home=new home_page(driver);
+        Assert.assertTrue(home.Is_homebody_Displayed(home.Important_Announcement));
+        Assert.assertTrue(home.Is_homebody_Displayed(home.Notice));
+        Assert.assertTrue(home.Is_homebody_Displayed(home.Profile));
+        Assert.assertTrue(home.Is_homebody_Displayed(home.Result_Summary));
+
+
+    }
+
+
+
+
+
+
 
 
 

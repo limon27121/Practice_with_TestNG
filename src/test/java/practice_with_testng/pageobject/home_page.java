@@ -8,38 +8,37 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 import java.util.ListIterator;
 
-public class home_page extends basepage{
+public class home_page extends basepage {
 
     public home_page(WebDriver driver) {
         super(driver);
     }
 
 
-
     //------locators
 
     //banner section
 
-    @FindBy(xpath="//div[@class='Header-Container']")
-     public WebElement banner;
+    @FindBy(xpath = "//div[@class='Header-Container']")
+    public WebElement banner;
 
-    @FindBy(xpath="//a[@id='ctl00_lblLogout']")
+    @FindBy(xpath = "//a[@id='ctl00_lblLogout']")
     public WebElement logout_button;
 
-    @FindBy(xpath="//div[@class='card-body text-center']")
+    @FindBy(xpath = "//div[@class='card-body text-center']")
     public WebElement login_card;
 
 
-    @FindBy(xpath="//div[contains(@class,'bg-c-yellow update-card')]//div[contains(@class,'panel-body card-block')]")
+    @FindBy(xpath = "//div[contains(@class,'bg-c-yellow update-card')]//div[contains(@class,'panel-body card-block')]")
     WebElement transcript_section;
 
-    @FindBy(xpath="//div[contains(@class,'bg-c-green update-card')]//div[contains(@class,'panel-body card-block')]")
+    @FindBy(xpath = "//div[contains(@class,'bg-c-green update-card')]//div[contains(@class,'panel-body card-block')]")
     WebElement balance_section;
 
-    @FindBy(xpath="//div[contains(@class,'bg-c-pink update-card')]//div[contains(@class,'panel-body card-block')]")
+    @FindBy(xpath = "//div[contains(@class,'bg-c-pink update-card')]//div[contains(@class,'panel-body card-block')]")
     WebElement online_payment;
 
-    @FindBy(xpath="//div[@id='bs-example-navbar-collapse-1']")
+    @FindBy(xpath = "//div[@id='bs-example-navbar-collapse-1']")
     WebElement navbar;
 
 
@@ -50,7 +49,7 @@ public class home_page extends basepage{
     private WebElement homeLink;
 
     @FindBy(linkText = "IQAC")
-    private WebElement iqacLink;
+    public WebElement iqacLink;
 
     @FindBy(linkText = "OBE")
     public WebElement obeLink;
@@ -59,30 +58,37 @@ public class home_page extends basepage{
     @FindBy(css = "ul.level1.nav.navbar-nav.static li a")
     private List<WebElement> menuLinks;
 
+    // ----------home body section-----------
 
+    @FindBy(xpath = "//body/form[@id='aspnetForm']/div[@class='container-fluid']/div[@class='row']/div/div[@class='container-fluid']/div[@class='container-fluid']/div[@class='row']/div[@class='col-lg-12 col-md-12']/div[@class='row']/div[@class='col-sm-12 col-md-8 col-lg-8']/div[1]/div[1]/div[1]")
+    public WebElement Important_Announcement;
+    @FindBy(xpath = "//body/form[@id='aspnetForm']/div[@class='container-fluid']/div[@class='row']/div/div[@class='container-fluid']/div[@class='container-fluid']/div[@class='row']/div[@class='col-lg-12 col-md-12']/div[@class='row']/div[@class='col-sm-12 col-md-8 col-lg-8']/div[2]/div[1]")
+    public WebElement Notice;
 
+    @FindBy(xpath = "//body/form[@id='aspnetForm']/div[@class='container-fluid']/div[@class='row']/div/div[@class='container-fluid']/div[@class='container-fluid']/div[@class='row']/div[@class='col-lg-12 col-md-12']/div[@class='row']/div[@class='col-sm-12 col-md-8 col-lg-8']/div[3]/div[1]")
+    public WebElement Profile;
 
-
-
+    @FindBy(xpath = "//body/form[@id='aspnetForm']/div[@class='container-fluid']/div[@class='row']/div/div[@class='container-fluid']/div[@class='container-fluid']/div[@class='row']/div[@class='col-lg-12 col-md-12']/div[@class='row']/div[@class='col-sm-12 col-md-4 col-lg-4']/div[3]/div[1]")
+    public WebElement Result_Summary;
 
 
     //Actions
 
-    public boolean transcript_displayed(){
-        boolean displayed_trans=transcript_section.isDisplayed();
+    public boolean transcript_displayed() {
+        boolean displayed_trans = transcript_section.isDisplayed();
         return displayed_trans;
     }
 
-    public boolean balance_displayed(){
-        boolean displayed_balance=balance_section.isDisplayed();
+    public boolean balance_displayed() {
+        boolean displayed_balance = balance_section.isDisplayed();
         return displayed_balance;
     }
 
-    public boolean payment_displayed(){
+    public boolean payment_displayed() {
         return online_payment.isDisplayed();
     }
 
-    public boolean navbar_displayed(){
+    public boolean navbar_displayed() {
         return navbar.isDisplayed();
     }
 
@@ -116,7 +122,6 @@ public class home_page extends basepage{
     }
 
 
-
     //----navbar body related methods---------
 
     // Return total size of  menu-items
@@ -141,15 +146,21 @@ public class home_page extends basepage{
         return element.isDisplayed();
     }
 
-    public boolean isLogoutClickable(WebElement element){
+    public boolean isLogoutClickable(WebElement element) {
         return element.isEnabled() && element.getAttribute("href") != null;
     }
 
-    public boolean logout_action(){
+    public boolean logout_action() {
         logout_button.click();
         return login_card.isDisplayed();
     }
 
 
+    public boolean Is_homebody_Displayed(WebElement element) {
+
+        return element.isDisplayed();
+    }
 
 }
+
+
