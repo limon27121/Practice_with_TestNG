@@ -51,4 +51,16 @@ public class IQAC_Testcase001 extends base_class {
                 "IQAC link in table not clickable or visible");
     }
 
+
+@Test
+    public void survey(){
+        home=new home_page(driver);
+        iqac=new IQAC_page(driver);
+        iqac.iqacLink();
+        iqac.survey();
+        Assert.assertTrue(iqac.survey_page_title.isDisplayed());
+        Assert.assertTrue(iqac.survey_submit.isDisplayed());
+
+    }
+
 }
