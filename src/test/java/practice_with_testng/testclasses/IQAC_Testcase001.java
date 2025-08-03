@@ -22,9 +22,14 @@ public class IQAC_Testcase001 extends base_class {
     public void Test_IQAC(){
        home=new home_page(driver);
        iqac=new IQAC_page(driver);
+       //check banner is displayed
         Assert.assertTrue(home.isBannerDisplayed(home.banner));
 
+        //check log is displayed
+        Assert.assertTrue(home.isBannerDisplayed(iqac.IQAC_logo));
+
     }
+
 
 
     @Test

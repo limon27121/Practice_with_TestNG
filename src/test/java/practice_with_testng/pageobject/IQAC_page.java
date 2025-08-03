@@ -19,6 +19,12 @@ public class IQAC_page extends basepage{
     public WebElement iqacLink;
 
 
+
+    //IQAC logo
+    @FindBy(xpath="//img[@alt='IQAC Logo']")
+    public WebElement IQAC_logo;
+
+
      public void click_IQAC(){
          home_page home=new home_page(driver);
          home.iqacLink.click();
@@ -29,6 +35,14 @@ public class IQAC_page extends basepage{
         String href = element.getAttribute("href");
         return element.isDisplayed() && href != null && !href.trim().isEmpty();
     }
+
+
+
+    public void iqacLink(){
+         iqacLink.click();
+    }
+
+
 
 
 

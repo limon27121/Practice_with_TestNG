@@ -10,7 +10,7 @@ import practice_with_testng.pageobject.home_page;
 import practice_with_testng.pageobject.login_page;
 
 import java.util.List;
-public class home_testcase002 extends base_class{
+public class home_testcase001 extends base_class{
 
     @Test
     public void home_page() throws InterruptedException {
