@@ -16,7 +16,6 @@ public class Admin_control_testCase001 extends base_class {
   Assert.assertTrue(ad01.user_mgt_header.isDisplayed());
   Assert.assertTrue(ad01.Message_section.isDisplayed());
   Assert.assertTrue(ad01.Update_button.isDisplayed()&&ad01.Update_button.isEnabled());
-
  }
 
 
