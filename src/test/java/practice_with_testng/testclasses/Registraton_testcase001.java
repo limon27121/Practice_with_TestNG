@@ -37,4 +37,31 @@ public class Registraton_testcase001 extends base_class{
 
 
     }
+
+    @Test
+    public void My_view(){
+        r1=new Registration(driver);
+        r1.My_view();
+        Assert.assertTrue(r1.details_body.isDisplayed());
+        Assert.assertTrue(r1.Gpa_details.isDisplayed());
+        Assert.assertTrue(r1.courses.isDisplayed());
+    }
+
+    @Test
+    public void View_class_routine(){
+        r1=new Registration(driver);
+        r1.View_class_routine();
+        Assert.assertTrue(r1.student_details1.isDisplayed());
+        Assert.assertTrue(r1.class_routine_header.isDisplayed());
+
+    }
+
+
+    @Test
+    public void Degree_verification() throws InterruptedException {
+        r1=new Registration(driver);
+        r1.Degree_verification();
+        Thread.sleep(500);
+        Assert.assertTrue(r1.Degree_verficiation_body.isDisplayed());
+    }
 }
